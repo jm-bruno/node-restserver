@@ -16,9 +16,9 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/Cafe';
 } else {
-    urlDB = 'mongodb+srv://jmbruno:EKCMY5GK3HvfYM5x@cluster0-yklcq.mongodb.net/cafe';
+    urlDB = process.env.MONGO_URI;
 }
 // Fuerzo cx a prod para pruebas remotas.
-//urlDB = 'mongodb+srv://jmbruno:EKCMY5GK3HvfYM5x@cluster0-yklcq.mongodb.net/cafe';
+//urlDB = process.env.MONGO_URI;
 
 process.env.URLDB = urlDB;

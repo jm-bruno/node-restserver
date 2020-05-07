@@ -12,7 +12,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(require('./routes/usuario'));
+// Configuración global de rutas
+app.use(require('./routes/index'));
 
 // mongodb://localhost:27017/Cafe
 // mongodb+srv://jmbruno:EKCMY5GK3HvfYM5x@cluster0-yklcq.mongodb.net/Cafe
